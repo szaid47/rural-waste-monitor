@@ -1,93 +1,120 @@
-# Digital MRF: Smarter Waste Tracking System
+# Digital-MRF-System
 
-A lightweight, offline-first digital solution designed for rural Material Recovery Facilities (MRFs). This tool simplifies waste inflow tracking, classification, and reporting to help local facilities operate more transparently and efficiently.
+## Project-Overview
 
----
+<p align="center">
+  <img src="Django-App/static/screenshots/mainPage.png" alt="Dashboard Preview" width="80%" />
+  <br/>
+  
+</p>
 
-## 🌍 Problem Statement
+The Waste Management System is a Django-based web application designed to enhance
+efficiency in waste management and promote environmental sustainability.
+This application allows users to track waste collection and manage recycling processes.
 
-Rural MRFs often face challenges such as:
+- 📄 [Download PDF Report](Django-App/static/screenshots/waste_evidence_report.pdf)
+- 📊 [Download CSV Report](Django-App/static/screenshots/csv_report.csv)
 
-- Manual, error-prone paper-based tracking
-- No real-time view of operations
-- Difficulty generating stakeholder-friendly reports
-- Poor coordination between intake, sorting, and dispatch
-- Lack of data insights to optimize performance
+## Features
 
----
+- **User Registration and Login: Secure user authentication system.**
+- **Waste Collection Tracking: Users can track waste collection and disposal/recycling.**
+- **Export data in csv and pdf format**
+- **API : built with DRF and simple-jwt**
 
-## ✅ Features
+## Technology Stack
 
-### 1. Real-Time Dashboard Monitoring
+- **Backend: Django (Python)**
+- **Database: sqlite**
+- **API: Django Rest Framework**
+- **Frontend: HTML, CSS**
+- **Dependency Management: Poetry**
 
-- Instant visibility into intake, processing status, and efficiency
-- Interactive charts show weekly trends and composition breakdowns
-- Progress tracking across all processing stages (sorting, QC, dispatch)
+## Getting Started
 
-### 2. Streamlined Waste Entry System
+These instructions will get you a copy of the project up and running on your local
+machine for development and testing purposes.
 
-- Replaces paper logs with intuitive digital forms
-- Captures source, weight, type, and condition
-- Offline-first: continue logging even without internet
-- Reduces errors and improves data reliability
+## Prerequisites
 
-### 3. Smart Classification Management
+- **Python 3.8+**
+- **Poetry (for dependency management)**
+- **Django 4.2+**
 
-- Batch-based system for organizing sorted materials
-- Integrated quality control workflows
-- Tracks destinations, quantities, and sorting performance
-- Improves material recovery through insights
+## Installation
 
-### 4. Automated Reporting
+### 1.Clone the repository
 
-- Generates weekly/monthly reports automatically
-- Stakeholder-specific formats (SHGs, PDOs, Gram Panchayats)
-- Improves transparency and community trust
-- Supports regulatory compliance
+- **git clone https://github.com/szaid47/rural-waste-monitor**
+- **cd** Django-App
 
----
-
-## 🚀 Key Benefits
-
-- **Transparency**: Real-time visibility for all stakeholders
-- **Efficiency**: Replaces manual work with streamlined digital workflows
-- **Accuracy**: Minimizes data loss and entry errors
-- **Accessibility**: Simple, mobile-friendly UI for rural users
-- **Offline Support**: Works in low-connectivity environments
-- **Scalability**: Designed to grow with operational needs
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React, TypeScript, Tailwind CSS, shadcn/ui
-- **Build Tool**: Vite
-
-> ⚠️ Currently, the app is frontend-only and runs on static mock data for demo purposes.
-
----
-
-### Suggested Tables:
-
-- `waste_entries`: logs intake with weight, type, and source
-- `classification_batches`: tracks sorting and QC
-- `processing_status`: monitors workflow progress
-- `reports`: stores generated report data per period
-
-You can connect your backend to replace the mock data with real-time queries and enable persistent storage for facility operations.
-
----
-
-## 📦 Getting Started
+### 2.Set up a Poetry environment
 
 ```bash
-# Clone the repository
-git clone https://github.com/szaid47/rural-waste-monitor
-cd rural-waste-monitor
-
-# Install dependencies
-npm install
-
-# Run the dev server
-npm run dev
+    poetry shell
+    poetry install
 ```
+
+### 3.Initialize the database
+
+- **create .env file with the variable names from settings.py.**
+
+To generate a new Django secret key use the following command:
+
+```bash
+python manage.py shell
+from django.core.management.utils import get_random_secret_key
+print(get_random_secret_key())
+```
+
+```bash
+python manage.py migrate
+```
+
+### 4.Create a superuser (optional)
+
+```bash
+python manage.py createsuperuser
+```
+
+### 5.Run the development server
+
+```bash
+python manage.py runserver
+```
+
+### 6.Access the application
+
+- **Open your web browser and navigate to http://127.0.0.1:8000/.**
+
+## Testing
+
+```bash
+python manage.py test
+```
+
+## License
+
+- **This project is licensed under the MIT License.**
+
+### Versioning
+
+- ** This application is at version 0.3.2 and subjected to future changes.**
+
+Here’s a quick look at some of the important pages in the Digital MRF System:
+
+### SignUp Page
+
+<img src="Django-App/static/screenshots/signUpPage.png" alt="signup Page" width="80%"/>
+
+### Profile Page
+
+<img src="Django-App/static/screenshots/accountPage.png" alt="ProfilePage" width="80%"/>
+
+### 📄 Waste Record Form
+
+<img src="Django-App/static/screenshots/RecordEntry.png" alt="Waste Record Form" width="80%"/>
+
+### 📊 Reports Page
+
+<img src="Django-App/static/screenshots/ReportsPage.png" alt="Reports Page" width="80%"/>

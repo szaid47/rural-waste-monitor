@@ -8,7 +8,7 @@
   
 </p>
 
-## Reports-overview
+## Reports-overview 
 
 <p align="center">
   <img src="Django-App/static/screenshots/Reports_page.png" alt="Dashboard Preview" width="80%" />

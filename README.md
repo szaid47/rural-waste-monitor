@@ -8,6 +8,14 @@
   
 </p>
 
+## Reports-overview
+
+<p align="center">
+  <img src="Django-App/static/screenshots/Reports_page.png" alt="Dashboard Preview" width="80%" />
+  <br/>
+  
+</p>
+
 The Waste Management System is a Django-based web application designed to enhance
 efficiency in waste management and promote environmental sustainability.
 This application allows users to track waste collection and manage recycling processes.
@@ -117,4 +125,4 @@ Here’s a quick look at some of the important pages in the Digital MRF System:
 
 ### 📊 Reports Page
 
-<img src="Django-App/static/screenshots/ReportsPage.png" alt="Reports Page" width="80%"/>
+<img src="Django-App/static/screenshots/reports_list.png" alt="Reports Page" width="80%"/>
